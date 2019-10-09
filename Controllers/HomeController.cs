@@ -15,14 +15,14 @@ namespace MIS4200Team11.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "We treat our culture with the same importance as we do our business strategy.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contact Information:";
 
             return View();
         }
