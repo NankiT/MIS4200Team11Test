@@ -7,6 +7,6 @@ namespace MIS4200Team11.Models
 {
     public class CoreValues
     {
-
+        
     }
 }

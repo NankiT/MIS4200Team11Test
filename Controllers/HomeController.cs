@@ -26,5 +26,12 @@ namespace MIS4200Team11.Controllers
 
             return View();
         }
+
+        public ActionResult CoreValues()
+            {
+
+                return View();
+            }
+        
     }
 }
