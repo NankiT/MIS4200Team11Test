@@ -184,6 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="centricImages\centric-logo.png" />
+    <Content Include="centricImages\register centric.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -240,6 +241,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\CoreValues.cshtml" />
+    <Content Include="Views\Account\Invalid.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
