@@ -22,6 +22,7 @@ namespace MIS4200Team11.Models
         [Display(Name = "Title")]
         public string title { get; set; }
         [Display(Name = "Business Units")]
+        public string fullName { get { return lastName + ", " + firstName; } }
         public ICollection<BusinessUnit> businessUnits { get; set; }
 
     }
