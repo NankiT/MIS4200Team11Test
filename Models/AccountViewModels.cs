@@ -7,6 +7,7 @@ namespace MIS4200Team11.Models
     {
         [Required]
         [Display(Name = "Email")]
+
         public string Email { get; set; }
     }
 
