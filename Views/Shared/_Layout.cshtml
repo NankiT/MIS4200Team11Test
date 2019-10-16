@@ -32,48 +32,50 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer style="background-color:darkgrey">            
-            <div class="container-fluid text-center text-md-left">                
-                <div class="row">                    
-                    <div class="col-md-6">                        
-                        <h5 style="font-size:26px;"><span style="color:gold">((</span><span style="color: white">CENTRIC</span><span style="color:gold">))</span></h5>
-                        <p style="color:white">Join 16,000 other people and get the latest updates on business, technology and digital to help improve your business.</p>
-                    </div>                    
-                    <div class="col-md-offset-6">                     
-                        <h5 style="font-size:26px;">
-                            <span style="color: white">
-                                FOLLOW US
-                            </span>
-                        </h5>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="https://www.facebook.com/CentricConsultingNational">Facebook</a>
-                            </li>
-
-                            <li>
-                                <a href="https://twitter.com/centric">Twitter</a>
-                            </li>
-
-                            <li>
-                                <a href="https://www.linkedin.com/company/centric-consulting/">LinkedIn</a>
-                            </li>
-
-                            <li>
-                                <a href="https://www.instagram.com/centricconsulting/">Instagram</a>
-                            </li>
-
-                            <li>
-                                <a href="https://www.youtube.com/channel/UCFmtoIKH1ijwpGpiJBxl4dw">YouTube</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>                
-            </div>
-            <p class="text-center">&copy; @DateTime.Now.Year - MIS Team 11 Centric Consulting</p>
-        </footer>
+        
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
+<footer style="background-color:darkgrey">
+    <div class="container-fluid text-center text-md-left">
+        <div class="row">
+            <div class="col-md-6">
+                <h5 style="font-size:26px;"><span style="color:gold">((</span><span style="color: white">CENTRIC</span><span style="color:gold">))</span></h5>
+                <p style="color:whitesmoke">Join 16,000 other people and get the latest updates on business, technology and digital to help improve your business.</p>
+            </div>
+            <div class="col-md-offset-6">
+                <h5 style="font-size:26px;">
+                    <span style="color: white">
+                        FOLLOW US
+                    </span>
+                </h5>
+                <ul class="list-unstyled">
+
+                    <li>
+                        <a href="https://www.facebook.com/CentricConsultingNational">Facebook</a>
+                    </li>
+
+                    <li>
+                        <a href="https://twitter.com/centric">Twitter</a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/company/centric-consulting/">LinkedIn</a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/centricconsulting/">Instagram</a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCFmtoIKH1ijwpGpiJBxl4dw">YouTube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p class="text-center" style="color:white">&copy; @DateTime.Now.Year - MIS Team 11 Centric Consulting</p>
+</footer>
 </html>
