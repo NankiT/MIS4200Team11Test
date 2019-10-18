@@ -7,7 +7,7 @@ using System.Data.Entity;
 
 namespace MIS4200Team11.DAL
 {
-    public class MIS4200Context
+    public class MIS4200Context : DbContext
     {
         public MIS4200Context() : base("name=DefaultConnection")
         {
