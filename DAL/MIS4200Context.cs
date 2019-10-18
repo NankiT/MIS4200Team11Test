@@ -18,5 +18,5 @@ namespace MIS4200Team11.DAL
         // the value outside should generally be the plural of the class name
         // and is the name used to reference the entity in code
         public DbSet<X> X { get; set; }
-        
-}
+
+    }
