@@ -7,6 +7,9 @@ namespace MIS4200Team11.Models
 {
     public class CoreValues
     {
-        
+        public string valueName { get; set; }
+
+        public string valueDescription { get; set; }
+
     }
 }
