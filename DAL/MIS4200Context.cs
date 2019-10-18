@@ -7,9 +7,9 @@ using System.Data.Entity;
 
 namespace MIS4200Team11.DAL
 {
-    public class MIS4200Context
+    public class MIS4200Context : DbContext
     {
-        public MIS4200Context() : base("name=DefaultConnection")
+        public MIS4200Context() : base ("name=DefaultConnection")
         {
             // this method is a 'constructor' and is called when a new context is created
             // the base attribute says which connection string to use
