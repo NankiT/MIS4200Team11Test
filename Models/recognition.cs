@@ -8,7 +8,7 @@ namespace MIS4200Team11.Models
 {
     public class recognition
     {
-        public int recognitionID { get; set; }
+        public Guid recognitionID { get; set; }
 
         [Required]
         [Display(Name = "Subject")]
@@ -21,5 +21,15 @@ namespace MIS4200Team11.Models
         [Display(Name = "Date of Recognition")]
         [DataType(DataType.Date)]
         public DateTime recognitionDate { get; set; }
+
+        //linking the user data
+        //public int userID { get; set; }
+        public virtual UserData User { get; set; }
+
+        //linking the core values
+        public int valueId { get; set; }
+        public virtual CoreValues Values { get; set; }
+
+        
     }
 }
