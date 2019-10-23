@@ -20,6 +20,7 @@ namespace MIS4200Team11.Controllers
 
         public AccountController()
         {
+            
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )

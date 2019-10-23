@@ -83,4 +83,11 @@ namespace MIS4200Team11.Models
         public string SelectedProvider { get; set; }
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
     }
+    public class ProfileViewModel
+    {
+        public int profileID { get; set; }
+        public string firstName { get; set; }
+        public ICollection<Profile> Profile { get; set; }
+
+    }
 }
