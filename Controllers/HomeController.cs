@@ -6,8 +6,10 @@ using System.Web.Mvc;
 
 namespace MIS4200Team11.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();
