@@ -22,7 +22,7 @@ namespace MIS4200Team11.DAL
         public DbSet<CoreValues> CoreValues { get; set; }
         public DbSet<recognition> recognitions { get; set; }
         public DbSet<myRecognition> myRecognitions { get; set; }
-        public DbSet<Profile> profiles { get; set; }
+        //public DbSet<Profile> profiles { get; set; }
 
         public DbSet<UserData> UserData { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

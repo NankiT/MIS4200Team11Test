@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\recognitionsController.cs" />
     <Compile Include="DAL\MIS4200Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -248,6 +249,11 @@
     <Content Include="Views\Home\CoreValues.cshtml" />
     <Content Include="Views\Account\Invalid.cshtml" />
     <Content Include="Views\Manage\Profile.cshtml" />
+    <Content Include="Views\recognitions\Create.cshtml" />
+    <Content Include="Views\recognitions\Delete.cshtml" />
+    <Content Include="Views\recognitions\Details.cshtml" />
+    <Content Include="Views\recognitions\Edit.cshtml" />
+    <Content Include="Views\recognitions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

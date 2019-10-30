@@ -1,0 +1,64 @@
+﻿@model MIS4200Team11.Models.recognition
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>recognition</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CoreValues.valueName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoreValues.valueName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserData.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserData.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.recognitionTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.recognitionTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.recognitionDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.recognitionDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.recognitionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.recognitionDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
