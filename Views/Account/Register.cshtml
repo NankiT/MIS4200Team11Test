@@ -36,16 +36,22 @@
             @Html.TextBoxFor(m => m.title, new { @class = "form-control" })
         </div>
     </div>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Business Unit <i class="glyphicon glyphicon-chevron-down"></i>
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Business Unit 1</a><br />
-            <a class="dropdown-item" href="#">Business Unit 2</a><br />
-            <a class="dropdown-item" href="#">Business Unit 3</a>
-        </div>
-    </div>
+    <select class="custom-select custom-select-sm">
+        <option selected>Select Location</option>
+        <option value="1">Boston</option>
+        <option value="2">Charlotte</option>
+        <option value="3">Chicago</option>
+        <option value="3">Cincinnati</option>
+        <option value="3">Cleveland</option>
+        <option value="3">Columbus</option>
+        <option value="3">India</option>
+        <option value="3">Indianapolis</option>
+        <option value="3">Louisville</option>
+        <option value="3">Miami</option>
+        <option value="3">Seattle</option>
+        <option value="3">St. Louis</option>
+        <option value="3">Tampa</option>
+    </select>
     <br />
     <div class="form-group">
         @Html.LabelFor(m => m.hireDate, new { @class = "col-md-2 control-label" })
