@@ -19,47 +19,6 @@
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.firstName, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.firstName, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.lastName, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.lastName, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.title, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.title, new { @class = "form-control" })
-        </div>
-    </div>
-    <select class="custom-select custom-select-sm">
-        <option selected>Select Location</option>
-        <option value="1">Boston</option>
-        <option value="2">Charlotte</option>
-        <option value="3">Chicago</option>
-        <option value="3">Cincinnati</option>
-        <option value="3">Cleveland</option>
-        <option value="3">Columbus</option>
-        <option value="3">India</option>
-        <option value="3">Indianapolis</option>
-        <option value="3">Louisville</option>
-        <option value="3">Miami</option>
-        <option value="3">Seattle</option>
-        <option value="3">St. Louis</option>
-        <option value="3">Tampa</option>
-    </select>
-    <br />
-    <div class="form-group">
-        @Html.LabelFor(m => m.hireDate, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.hireDate, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
         @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
@@ -73,7 +32,8 @@
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
+            <input type="submit" value="Register" class="btn btn-default" />
+            <a href="http://cob.ohio.edu/mis4200Team11/Profiles/Create" class="btn btn-info" role="button">Continue</a>
         </div>
     </div>
 }
