@@ -10,8 +10,7 @@ namespace MIS4200Team11.Models
     {
         [Key]
         [Required]
-        [Display(Name = "Employee ID")]
-        public int employeeID { get; set; }
+        public Guid ID { get; set; }
 
         [Required]
         [Display(Name = "First Name")]
@@ -28,5 +27,11 @@ namespace MIS4200Team11.Models
         [Display(Name = "Hire Date")]
         [DataType(DataType.DateTime)]
         public DateTime hireDate { get; set; }
+        [Display(Name = "Business Units")]
+        public string fullName { get { return lastName + ", " + firstName; } }
+        public ICollection<BusinessUnit> BusinessUnits { get; set; }
+        public ICollection<recognition> recognitions { get; set; }
+        public ICollection<myRecognition> myRecognitions { get; set; }
+        public ICollection<CoreValues> CoreValues { get; set; }
     }
 }
