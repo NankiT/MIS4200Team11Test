@@ -25,11 +25,13 @@ namespace MIS4200Team11.Models
         [Display(Name = "Title")]
         public string title { get; set; }
         [Display(Name = "Business Units")]
+        public int unitID { get; set; }
+        public virtual BusinessUnit BusinessUnits { get; set; }
         public string fullName { get { return lastName + ", " + firstName; } }
-        public ICollection<BusinessUnit> BusinessUnits { get; set; }
+       
         public ICollection<recognition> recognitions { get; set; }
         public ICollection<myRecognition> myRecognitions { get; set; }
-        public ICollection<CoreValues> CoreValues { get; set; }
+      
 
     }
 }

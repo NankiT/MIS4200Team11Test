@@ -17,6 +17,7 @@ namespace MIS4200Team11.Models
 
         public ICollection<recognition> recognitions { get; set; }
 
+        public ICollection<UserData> UserData { get; set; }
 
     }
 }
