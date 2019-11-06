@@ -10,6 +10,7 @@ namespace MIS4200Team11.Models
     public class UserData
     {
         [Key]
+        [Required]
         public Guid userID { get; set; }
 
         [Required]
@@ -24,13 +25,15 @@ namespace MIS4200Team11.Models
         [Required]
         [Display(Name = "Title")]
         public string title { get; set; }
+
         [Display(Name = "Business Units")]
+        [Required]
         public int unitID { get; set; }
+        [Required]
         public virtual BusinessUnit BusinessUnits { get; set; }
         public string fullName { get { return lastName + ", " + firstName; } }
        
         public ICollection<recognition> recognitions { get; set; }
-        public ICollection<myRecognition> myRecognitions { get; set; }
       
 
     }
