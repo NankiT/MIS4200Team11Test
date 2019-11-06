@@ -16,7 +16,7 @@ namespace MIS4200Team11.Models
         public string recognitionTitle { get; set; }
 
         [Required]
-        [Display(Name = "What did he/she do that represented one of our values?")]
+        [Display(Name = "What did they do that represented one of our values?")]
         public string recognitionDescription { get; set; }
 
         [Display(Name = "Date of Recognition")]
