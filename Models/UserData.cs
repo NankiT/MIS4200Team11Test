@@ -29,7 +29,7 @@ namespace MIS4200Team11.Models
         [Display(Name = "Business Units")]
         [Required]
         public int unitID { get; set; }
-        [Required]
+
         public virtual BusinessUnit BusinessUnits { get; set; }
         public string fullName { get { return lastName + ", " + firstName; } }
        
