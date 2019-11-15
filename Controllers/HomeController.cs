@@ -30,11 +30,13 @@ namespace MIS4200Team11.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public ActionResult CoreValues()
             {
 
                 return View();
             }
-        
+       
+
     }
 }
