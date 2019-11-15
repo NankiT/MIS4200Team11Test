@@ -15,13 +15,14 @@ namespace MIS4200Team11.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public ActionResult About()
         {
             ViewBag.Message = "We treat our culture with the same importance as we do our business strategy.";
 
             return View();
         }
-
+        [AllowAnonymous]
         public ActionResult Contact()
         {
             ViewBag.Message = "Contact Information:";

@@ -27,13 +27,13 @@ namespace MIS4200Team11.Models
         //linking the user data
         [Required]
         public Guid userID { get; set; }
-        [Required]
+        
         public virtual UserData UserData { get; set; }
 
         //linking the core values
         [Required]
         public int valueId { get; set; }
-        [Required]
+        
         public virtual CoreValues CoreValues { get; set; }
 
         
