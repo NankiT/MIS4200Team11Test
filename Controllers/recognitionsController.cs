@@ -41,7 +41,7 @@ namespace MIS4200Team11.Controllers
         public ActionResult Create()
         {
             ViewBag.valueId = new SelectList(db.CoreValues, "valueId", "valueName");
-            ViewBag.userID = new SelectList(db.UserData, "userID", "firstName");
+            ViewBag.userID = new SelectList(db.UserData, "userID", "fullName");
             return View();
         }
 
@@ -61,7 +61,7 @@ namespace MIS4200Team11.Controllers
             }
 
             ViewBag.valueId = new SelectList(db.CoreValues, "valueId", "valueName", recognition.valueId);
-            ViewBag.userID = new SelectList(db.UserData, "userID", "firstName", recognition.userID);
+            ViewBag.userID = new SelectList(db.UserData, "userID", "fullName", recognition.userID);
             return View(recognition);
         }
 
@@ -96,7 +96,7 @@ namespace MIS4200Team11.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.valueId = new SelectList(db.CoreValues, "valueId", "valueName", recognition.valueId);
-            ViewBag.userID = new SelectList(db.UserData, "userID", "firstName", recognition.userID);
+            ViewBag.userID = new SelectList(db.UserData, "userID", "fullName", recognition.userID);
             return View(recognition);
         }
 

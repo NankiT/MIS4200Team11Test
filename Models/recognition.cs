@@ -26,12 +26,14 @@ namespace MIS4200Team11.Models
 
         //linking the user data
         [Required]
+        [Display(Name ="User Being Recognized")]
         public Guid userID { get; set; }
         
         public virtual UserData UserData { get; set; }
 
         //linking the core values
         [Required]
+        [Display(Name ="Core Value")]
         public int valueId { get; set; }
         
         public virtual CoreValues CoreValues { get; set; }
