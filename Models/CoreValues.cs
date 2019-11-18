@@ -10,6 +10,7 @@ namespace MIS4200Team11.Models
     {
         [Key]
         [Required]
+        [Display(Name = "Core Value")]
         public int valueId { get; set; }
 
         [Required]
