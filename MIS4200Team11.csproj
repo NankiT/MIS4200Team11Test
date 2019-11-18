@@ -190,10 +190,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="centricImages\20 years together.jpg" />
+    <Content Include="centricImages\boston_2000x.jpg" />
+    <Content Include="centricImages\charlotte-skyline-clear-sky-images.jpg" />
+    <Content Include="centricImages\Chicago-Skyline-01.png" />
+    <Content Include="centricImages\cincinnati.jpg" />
+    <Content Include="centricImages\Cleveland.jpg" />
+    <Content Include="centricImages\columbus.jpg" />
+    <Content Include="centricImages\gateway-arch-and-saint-louis-skyline-on-the-mississippi-river-gregory-ballos.jpg" />
+    <Content Include="centricImages\INDIA.jpg" />
+    <Content Include="centricImages\Indianapolis.jpg" />
+    <Content Include="centricImages\Louisville.jpg" />
     <Content Include="centricImages\centric-logo.png" />
     <Content Include="centricImages\lightbulb-idea-innovation.jpg" />
+    <Content Include="centricImages\MIAMI.jpg" />
+    <Content Include="centricImages\northern-chicago-skyline-at-sunset-chrisp0.jpg" />
     <Content Include="centricImages\register centric.jpg" />
     <Content Include="centricImages\rock-1110705_960_720 %282%29.jpg" />
+    <Content Include="centricImages\seattle-space-needle-picture-13661-848846.jpg" />
+    <Content Include="centricImages\tampa-skyline-boats-1073302138.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
