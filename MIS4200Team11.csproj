@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BusinessUnitsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\recognitionsController.cs" />
@@ -190,14 +191,9 @@
   <ItemGroup>
     <Content Include="centricImages\20 years together.jpg" />
     <Content Include="centricImages\centric-logo.png" />
+    <Content Include="centricImages\lightbulb-idea-innovation.jpg" />
     <Content Include="centricImages\register centric.jpg" />
-    <Content Include="centricImages\stockphoto.jpg" />
-    <Content Include="centricImages\stockphoto1.jpg" />
-    <Content Include="centricImages\stockphoto2.jpg" />
-    <Content Include="centricImages\stockphoto3.jpg" />
-    <Content Include="centricImages\stockphoto4.jpg" />
-    <Content Include="centricImages\stockphoto5.jpg" />
-    <Content Include="centricImages\stockphoto6.jpg" />
+    <Content Include="centricImages\rock-1110705_960_720 %282%29.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -266,6 +262,11 @@
     <Content Include="Views\recognitions\Details.cshtml" />
     <Content Include="Views\recognitions\Edit.cshtml" />
     <Content Include="Views\recognitions\Index.cshtml" />
+    <Content Include="Views\BusinessUnits\Create.cshtml" />
+    <Content Include="Views\BusinessUnits\Delete.cshtml" />
+    <Content Include="Views\BusinessUnits\Details.cshtml" />
+    <Content Include="Views\BusinessUnits\Edit.cshtml" />
+    <Content Include="Views\BusinessUnits\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
