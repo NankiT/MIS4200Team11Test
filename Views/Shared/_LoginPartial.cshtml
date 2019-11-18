@@ -6,8 +6,16 @@
     @Html.AntiForgeryToken()
         
     <ul class="nav navbar-nav navbar-right">
-        <li>
-        @Html.ActionLink("Give Recogniton", "Index", "recognitions")
+        <li class="dropdown">
+            <button class="btn btn-warning dropdown-toggle" style="margin-top:8px;" type="button" data-toggle="dropdown">
+                Recognition <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Give Recognition", "Create", "recognitions")</li>
+                <li>@Html.ActionLink("Leaderboard", "Index", "recognitions")</li>
+
+
+            </ul>
         </li>
         <li>
             @Html.ActionLink("My Account", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
