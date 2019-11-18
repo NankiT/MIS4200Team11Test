@@ -191,6 +191,13 @@
     <Content Include="centricImages\20 years together.jpg" />
     <Content Include="centricImages\centric-logo.png" />
     <Content Include="centricImages\register centric.jpg" />
+    <Content Include="centricImages\stockphoto.jpg" />
+    <Content Include="centricImages\stockphoto1.jpg" />
+    <Content Include="centricImages\stockphoto2.jpg" />
+    <Content Include="centricImages\stockphoto3.jpg" />
+    <Content Include="centricImages\stockphoto4.jpg" />
+    <Content Include="centricImages\stockphoto5.jpg" />
+    <Content Include="centricImages\stockphoto6.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
