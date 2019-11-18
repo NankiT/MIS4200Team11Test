@@ -14,11 +14,18 @@ namespace MIS4200Team11.Controllers
 {
     public class UserDatasController : Controller
     {
-        private MIS4200Context db = new MIS4200Context();
+        public MIS4200Context db = new MIS4200Context();
 
         // GET: UserDatas
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
+            var testusers = from u in db.UserData select u;
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                testusers = testusers.Where(u => u.lastName.Contains(searchString) || u.firstName.Contains(searchString));
+                return View(testusers.ToList());
+            }
+            return View(db.UserData.ToList());
             var userData = db.UserData.Include(u => u.BusinessUnits);
             return View(userData.ToList());
         }
