@@ -191,7 +191,9 @@
   <ItemGroup>
     <Content Include="centricImages\20 years together.jpg" />
     <Content Include="centricImages\centric-logo.png" />
+    <Content Include="centricImages\lightbulb-idea-innovation.jpg" />
     <Content Include="centricImages\register centric.jpg" />
+    <Content Include="centricImages\rock-1110705_960_720 %282%29.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
