@@ -13,6 +13,7 @@ namespace MIS4200Team11.Models
         public int unitID { get; set; }
 
         [Required]
+        [Display(Name ="Business Unit")]
         public string businessUnit { get; set; }
         public ICollection<UserData> UserData { get; set; }
     }
