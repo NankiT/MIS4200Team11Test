@@ -4,12 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Employee Directory</h2>
 
 @using (Html.BeginForm("Index","userDatas",FormMethod.Get))
 {
     <p>
-        Find by name: @Html.TextBox("searchString")
+        Find by Employee First or Last Name: @Html.TextBox("searchString")
         <input type="submit" value="Search" />
     </p>
 }
