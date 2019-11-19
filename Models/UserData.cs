@@ -31,6 +31,7 @@ namespace MIS4200Team11.Models
         public int unitID { get; set; }
 
         public virtual BusinessUnit BusinessUnits { get; set; }
+        [Display(Name ="Employee Recognized")]
         public string fullName { get { return lastName + ", " + firstName; } }
        
         public ICollection<recognition> recognitions { get; set; }
