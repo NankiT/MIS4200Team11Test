@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using MIS4200Team11.DAL;
 using MIS4200Team11.Models;
+using Microsoft.AspNet.Identity;
 
 namespace MIS4200Team11.Controllers
 {
@@ -19,8 +20,26 @@ namespace MIS4200Team11.Controllers
         public ActionResult Index()
         {
             var recognitions = db.Recognitions.Include(r => r.CoreValues).Include(r => r.UserData);
+
+             Guid memberID;
+                Guid.TryParse(User.Identity.GetUserId(), out memberID);
+                
+            var rec = db.Recognitions.Where(r =>r.userID == memberID);
+            return View(rec.ToList());
+        }
+
+        public ActionResult Leaderboard()
+        {
+            var recognitions = db.Recognitions.Include(r => r.CoreValues).Include(r => r.UserData);
+
+            Guid memberID;
+            Guid.TryParse(User.Identity.GetUserId(), out memberID);
+
+            var rec = db.Recognitions.Where(r => r.userID == memberID);
             return View(recognitions.ToList());
         }
+
+
 
         // GET: recognitions/Details/5
         public ActionResult Details(Guid? id)
