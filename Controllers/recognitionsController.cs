@@ -21,21 +21,21 @@ namespace MIS4200Team11.Controllers
         {
             var recognitions = db.Recognitions.Include(r => r.CoreValues).Include(r => r.UserData);
 
-             Guid memberID;
-                Guid.TryParse(User.Identity.GetUserId(), out memberID);
+            // Guid memberID;
+             //   Guid.TryParse(User.Identity.GetUserId(), out memberID);
                 
-            var rec = db.Recognitions.Where(r =>r.userID == memberID);
-            return View(rec.ToList());
+           // var rec = db.Recognitions.Where(r =>r.userID == memberID);
+            return View(recognitions.ToList());
         }
 
         public ActionResult Leaderboard()
         {
             var recognitions = db.Recognitions.Include(r => r.CoreValues).Include(r => r.UserData);
 
-            Guid memberID;
-            Guid.TryParse(User.Identity.GetUserId(), out memberID);
+           // Guid memberID;
+          //  Guid.TryParse(User.Identity.GetUserId(), out memberID);
 
-            var rec = db.Recognitions.Where(r => r.userID == memberID);
+           // var rec = db.Recognitions.Where(r => r.userID == memberID);
             return View(recognitions.ToList());
         }
 
