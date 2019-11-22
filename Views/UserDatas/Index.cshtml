@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MIS4200Team11.Models.UserData>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employee Directory</h2>
+
+@using (Html.BeginForm("Index","userDatas",FormMethod.Get))
+{
+    <p>
+        Find by Employee First or Last Name: @Html.TextBox("searchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessUnits.businessUnit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hireDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessUnits.businessUnit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hireDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+
+            @Html.ActionLink("Details", "Details", new { id=item.userID })
+
+        </td>
+    </tr>
+}
+
+</table>

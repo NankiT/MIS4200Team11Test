@@ -19,16 +19,23 @@ namespace MIS4200Team11.Models
         [Display(Name = "What did they do that represented one of our values?")]
         public string recognitionDescription { get; set; }
 
+        [Required]
         [Display(Name = "Date of Recognition")]
         [DataType(DataType.Date)]
         public DateTime recognitionDate { get; set; }
 
         //linking the user data
+        [Required]
+        [Display(Name ="User Being Recognized")]
         public Guid userID { get; set; }
+        
         public virtual UserData UserData { get; set; }
 
         //linking the core values
+        [Required]
+        [Display(Name ="Core Value")]
         public int valueId { get; set; }
+        
         public virtual CoreValues CoreValues { get; set; }
 
         

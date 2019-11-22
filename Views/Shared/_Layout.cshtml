@@ -23,9 +23,10 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Core Values", "CoreValues", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Give Recogniton", "Index","recognitions")</li>
+                    
+                                      
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -84,12 +85,18 @@
         <div class="row">
             <div class="col-md-6">
                 <h5 style="font-size:26px;"><span style="color:gold">((</span><span style="color: indigo">CENTRIC</span><span style="color:gold">))</span></h5>
-                <p style="color:whitesmoke">We have grown our business on a set of three building blocks:  Enjoy the people you work with, have fun, and do great work!</p>
+                <p style="color:white">Enjoy the people you work with, have fun, and do great work!
+                    <br /> 
+                    <br />
+                <a href="https://www.centricconsulting.com" class="btn btn-warning btn-sm">Learn More ></a>
+                             
+                </p>
             </div>
+            
             <div class="col-md-6">
                 <h5 style="font-size:26px;">
-                    <span style="color: whitesmoke">
-                        FOLLOW US
+                    <span style="color: white">
+                        Follow Us!
                     </span>
                 </h5>
                 <ul class="list-unstyled">
@@ -112,3 +119,4 @@
     </div>
     <p class="text-center" style="color:white">&copy; @DateTime.Now.Year - MIS Team 11 Centric Consulting</p>
 </footer>
+

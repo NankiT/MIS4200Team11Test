@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using MIS4200Team11.DAL;
 using MIS4200Team11.Models;
+using Microsoft.AspNet.Identity;
 
 namespace MIS4200Team11.Controllers
 {
@@ -18,9 +19,27 @@ namespace MIS4200Team11.Controllers
         // GET: recognitions
         public ActionResult Index()
         {
-            var recognitions = db.recognitions.Include(r => r.CoreValues).Include(r => r.UserData);
+            var recognitions = db.Recognitions.Include(r => r.CoreValues).Include(r => r.UserData);
+
+             Guid memberID;
+                Guid.TryParse(User.Identity.GetUserId(), out memberID);
+                
+            var rec = db.Recognitions.Where(r =>r.userID == memberID);
+            return View(rec.ToList());
+        }
+
+        public ActionResult Leaderboard()
+        {
+            var recognitions = db.Recognitions.Include(r => r.CoreValues).Include(r => r.UserData);
+
+            Guid memberID;
+            Guid.TryParse(User.Identity.GetUserId(), out memberID);
+
+            var rec = db.Recognitions.Where(r => r.userID == memberID);
             return View(recognitions.ToList());
         }
+
+
 
         // GET: recognitions/Details/5
         public ActionResult Details(Guid? id)
@@ -29,7 +48,7 @@ namespace MIS4200Team11.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            recognition recognition = db.recognitions.Find(id);
+            recognition recognition = db.Recognitions.Find(id);
             if (recognition == null)
             {
                 return HttpNotFound();
@@ -41,7 +60,7 @@ namespace MIS4200Team11.Controllers
         public ActionResult Create()
         {
             ViewBag.valueId = new SelectList(db.CoreValues, "valueId", "valueName");
-            ViewBag.userID = new SelectList(db.UserData, "userID", "firstName");
+            ViewBag.userID = new SelectList(db.UserData, "userID", "fullName");
             return View();
         }
 
@@ -55,13 +74,13 @@ namespace MIS4200Team11.Controllers
             if (ModelState.IsValid)
             {
                 recognition.recognitionID = Guid.NewGuid();
-                db.recognitions.Add(recognition);
+                db.Recognitions.Add(recognition);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
             ViewBag.valueId = new SelectList(db.CoreValues, "valueId", "valueName", recognition.valueId);
-            ViewBag.userID = new SelectList(db.UserData, "userID", "firstName", recognition.userID);
+            ViewBag.userID = new SelectList(db.UserData, "userID", "fullName", recognition.userID);
             return View(recognition);
         }
 
@@ -72,7 +91,7 @@ namespace MIS4200Team11.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            recognition recognition = db.recognitions.Find(id);
+            recognition recognition = db.Recognitions.Find(id);
             if (recognition == null)
             {
                 return HttpNotFound();
@@ -96,7 +115,7 @@ namespace MIS4200Team11.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.valueId = new SelectList(db.CoreValues, "valueId", "valueName", recognition.valueId);
-            ViewBag.userID = new SelectList(db.UserData, "userID", "firstName", recognition.userID);
+            ViewBag.userID = new SelectList(db.UserData, "userID", "fullName", recognition.userID);
             return View(recognition);
         }
 
@@ -107,7 +126,7 @@ namespace MIS4200Team11.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            recognition recognition = db.recognitions.Find(id);
+            recognition recognition = db.Recognitions.Find(id);
             if (recognition == null)
             {
                 return HttpNotFound();
@@ -120,8 +139,8 @@ namespace MIS4200Team11.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(Guid id)
         {
-            recognition recognition = db.recognitions.Find(id);
-            db.recognitions.Remove(recognition);
+            recognition recognition = db.Recognitions.Find(id);
+            db.Recognitions.Remove(recognition);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
