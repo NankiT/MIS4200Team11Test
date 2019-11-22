@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Craete New Recognition</h4>
+        <h4>Create New Recognition</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -24,6 +24,8 @@
         </div>
 
         <div class="form-group">
+            <textarea class="form-control" rows="5" id="comment" name="text"</textarea>
+    
             @Html.LabelFor(model => model.recognitionDescription, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.recognitionDescription, new { htmlAttributes = new { @class = "form-control" } })
