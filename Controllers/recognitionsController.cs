@@ -25,7 +25,7 @@ namespace MIS4200Team11.Controllers
             Guid.TryParse(User.Identity.GetUserId(), out memberID);
                 
             var rec = db.Recognitions.Where(r =>r.userID == memberID);
-            return View(recognitions.ToList());
+            return View(recognitions.ToList().OrderByDescending(a=>a.recognitionDate));
         }
 
         public ActionResult Leaderboard()
