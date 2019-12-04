@@ -193,12 +193,13 @@
     <Content Include="centricImages\boston_2000x.jpg" />
     <Content Include="centricImages\centric-logo.png" />
     <Content Include="centricImages\centricemployees.jpg" />
+    <Content Include="centricImages\centricteampic.png" />
     <Content Include="centricImages\charlotte-skyline-clear-sky-images.jpg" />
     <Content Include="centricImages\Chicago-Skyline-01.png" />
     <Content Include="centricImages\cincinnati.jpg" />
     <Content Include="centricImages\Cleveland.jpg" />
     <Content Include="centricImages\columbus.jpg" />
-    <Content Include="centricImages\cvpic.jpg" />
+    <Content Include="centricImages\contact.jpg" />
     <Content Include="centricImages\gateway-arch-and-saint-louis-skyline-on-the-mississippi-river-gregory-ballos.jpg" />
     <Content Include="centricImages\INDIA.jpg" />
     <Content Include="centricImages\Indianapolis.jpg" />
