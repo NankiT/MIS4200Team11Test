@@ -45,7 +45,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.userID, "Employee being recognized:", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("userID", (SelectList)ViewBag.recID, "Please Select", htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("userId", (SelectList)ViewBag.userId, "Please Select", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.userID, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -53,7 +53,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.valueId, "Core Value", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("valueID", (SelectList)ViewBag.recID, "Please Select", htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("valueId", (SelectList)ViewBag.valueId, "Please Select", htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.valueId, "", new { @class = "text-danger" })
             </div>
         </div>
