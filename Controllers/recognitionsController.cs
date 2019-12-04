@@ -60,7 +60,10 @@ namespace MIS4200Team11.Controllers
         public ActionResult Create()
         {
             ViewBag.valueId = new SelectList(db.CoreValues, "valueId", "valueName");
-            ViewBag.userID = new SelectList(db.UserData, "userID", "fullName");
+            string UserId = User.Identity.GetUserId();
+            SelectList userList = new SelectList(db.UserData, "userID", "fullName");
+            userList = new SelectList(userList.Where(x => x.Value != UserId).ToList(), "Value", "Text");
+            ViewBag.userID = userList;
             return View();
         }
 
