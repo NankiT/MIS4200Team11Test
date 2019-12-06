@@ -276,11 +276,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\CoreValues.cshtml" />
     <Content Include="Views\Account\Invalid.cshtml" />
-    <Content Include="Views\UserDatas\Create.cshtml" />
-    <Content Include="Views\UserDatas\Delete.cshtml" />
-    <Content Include="Views\UserDatas\Details.cshtml" />
-    <Content Include="Views\UserDatas\Edit.cshtml" />
-    <Content Include="Views\UserDatas\Index.cshtml" />
     <Content Include="Views\recognitions\Create.cshtml" />
     <Content Include="Views\recognitions\Delete.cshtml" />
     <Content Include="Views\recognitions\Details.cshtml" />
@@ -292,6 +287,11 @@
     <Content Include="Views\BusinessUnits\Edit.cshtml" />
     <Content Include="Views\BusinessUnits\Index.cshtml" />
     <Content Include="Views\recognitions\Leaderboard.cshtml" />
+    <Content Include="Views\UserDatas\Create.cshtml" />
+    <Content Include="Views\UserDatas\Delete.cshtml" />
+    <Content Include="Views\UserDatas\Details.cshtml" />
+    <Content Include="Views\UserDatas\Edit.cshtml" />
+    <Content Include="Views\UserDatas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -14,7 +14,7 @@ namespace MIS4200Team11.Controllers
 {
     public class UserDatasController : Controller
     {
-        public MIS4200Context db = new MIS4200Context();
+        private MIS4200Context db = new MIS4200Context();
 
         // GET: UserDatas
         public ActionResult Index(string searchString)
@@ -26,9 +26,9 @@ namespace MIS4200Team11.Controllers
                 return View(testusers.ToList());
             }
             return View(db.UserData.ToList());
-            var userData = db.UserData.Include(u => u.BusinessUnits);
-            return View(userData.ToList());
+            
         }
+
 
         // GET: UserDatas/Details/5
         public ActionResult Details(Guid? id)
@@ -57,21 +57,24 @@ namespace MIS4200Team11.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "userID,firstName,lastName,hireDate,title,unitID")] UserData userData)
+        public ActionResult Create([Bind(Include = "userID,firstName,lastName,hireDate,title,unitID,recCounter")] UserData userData)
         {
-            if (ModelState.IsValid)
             {
-                Guid memberID;
-                Guid.TryParse(User.Identity.GetUserId(), out memberID);
-                userData.userID = memberID;
-                
-                db.UserData.Add(userData);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    Guid memberID;
+                    Guid.TryParse(User.Identity.GetUserId(), out memberID);
+                    userData.userID = memberID;
+                    userData.recCounter = 0;
+                    db.UserData.Add(userData);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+
+                ViewBag.unitID = new SelectList(db.BusinessUnit, "unitID", "businessUnit", userData.unitID);
+                return View(userData);
             }
 
-            ViewBag.unitID = new SelectList(db.BusinessUnit, "unitID", "businessUnit", userData.unitID);
-            return View(userData);
         }
 
         // GET: UserDatas/Edit/5
@@ -95,7 +98,7 @@ namespace MIS4200Team11.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "userID,firstName,lastName,hireDate,title,unitID")] UserData userData)
+        public ActionResult Edit([Bind(Include = "userID,firstName,lastName,hireDate,title,unitID,recCounter")] UserData userData)
         {
             if (ModelState.IsValid)
             {

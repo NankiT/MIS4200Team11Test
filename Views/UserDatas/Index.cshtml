@@ -1,19 +1,14 @@
 ﻿@model IEnumerable<MIS4200Team11.Models.UserData>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Employee Directory";
 }
 
 <h2>Employee Directory</h2>
 
-@using (Html.BeginForm("Index","userDatas",FormMethod.Get))
-{
-    <p>
-        Find by Employee First or Last Name: @Html.TextBox("searchString")
-        <input type="submit" value="Search" />
-    </p>
-}
-
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 <table class="table">
     <tr>
         <th>
@@ -30,6 +25,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.recCounter)
         </th>
         <th></th>
     </tr>
@@ -52,9 +50,12 @@
             @Html.DisplayFor(modelItem => item.title)
         </td>
         <td>
-
-            @Html.ActionLink("Details", "Details", new { id=item.userID })
-
+            @Html.DisplayFor(modelItem => item.recCounter)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.userID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.userID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.userID })
         </td>
     </tr>
 }
