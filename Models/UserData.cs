@@ -37,7 +37,8 @@ namespace MIS4200Team11.Models
         public ICollection<recognition> recognitions { get; set; }
       
         
-
+        [Required]
+        [Display(Name = "Number of recognitions")]
         public int recCounter { get; set; }
     }
 }

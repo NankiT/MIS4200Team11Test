@@ -7,7 +7,9 @@
 <h2>Employee Directory</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink("Create New", "Create")*@
+    Find by Employee First or Last Name: @Html.TextBox("searchString")
+    <input type="submit" value="Search" />
 </p>
 <table class="table">
     <tr>
@@ -53,9 +55,10 @@
             @Html.DisplayFor(modelItem => item.recCounter)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.userID }) |
+           @* @Html.ActionLink("Edit", "Edit", new { id=item.userID }) |
             @Html.ActionLink("Details", "Details", new { id=item.userID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.userID })
+           *@
         </td>
     </tr>
 }

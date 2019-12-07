@@ -31,13 +31,21 @@ namespace MIS4200Team11.Controllers
 
 
         // GET: UserDatas/Details/5
+
         public ActionResult Details(Guid? id)
         {
+            
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserData userData = db.UserData.Find(id);
+
+            //this part only lets users see details aboout themselves
+            Guid memberID;
+            Guid.TryParse(User.Identity.GetUserId(), out memberID);
+
+            //change memberID to id to allow details on index page to view individual account details
+            UserData userData = db.UserData.Find(memberID);
             if (userData == null)
             {
                 return HttpNotFound();
@@ -68,7 +76,7 @@ namespace MIS4200Team11.Controllers
                     userData.recCounter = 0;
                     db.UserData.Add(userData);
                     db.SaveChanges();
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index","Home");
                 }
 
                 ViewBag.unitID = new SelectList(db.BusinessUnit, "unitID", "businessUnit", userData.unitID);
