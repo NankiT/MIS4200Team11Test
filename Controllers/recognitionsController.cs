@@ -79,6 +79,13 @@ namespace MIS4200Team11.Controllers
             {
                 recognition.recognitionID = Guid.NewGuid();
                 db.Recognitions.Add(recognition);
+                Guid recCounterId = recognition.userID;
+
+                var test = db.Recognitions.Where(c => c.userID == recCounterId);
+                int testCount = test.ToList().Count();
+                testCount += 1;
+                db.Database.ExecuteSqlCommand("UPDATE UserDatas SET recCounter = " + testCount.ToString() + " WHERE userID = '" + recCounterId.ToString() + "'");
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
