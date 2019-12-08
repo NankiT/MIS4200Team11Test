@@ -292,6 +292,7 @@
     <Content Include="Views\UserDatas\Details.cshtml" />
     <Content Include="Views\UserDatas\Edit.cshtml" />
     <Content Include="Views\UserDatas\Index.cshtml" />
+    <Content Include="Views\UserDatas\Leaderboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

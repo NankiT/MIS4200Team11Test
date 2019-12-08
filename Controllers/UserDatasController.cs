@@ -29,7 +29,17 @@ namespace MIS4200Team11.Controllers
             
         }
 
+        public ActionResult Leaderboard(string searchString)
+        {
+            var testusers = from u in db.UserData select u;
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                testusers = testusers.Where(u => u.lastName.Contains(searchString) || u.firstName.Contains(searchString));
+                return View(testusers.ToList());
+            }
+            return View(db.UserData.ToList().OrderByDescending(a => a.recCounter));
 
+        }
         // GET: UserDatas/Details/5
 
         public ActionResult Details(Guid? id)
